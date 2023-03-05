@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class DestroyOnContact : MonoBehaviour
 {
+    public AudioSource sound;
+    
     private void OnCollisionEnter(Collision collision) 
     {
-        if (collision.gameObject.tag == "Destructible")
-        Destroy(collision.gameObject);
+        if (collision.gameObject.tag == "Destructible"){
+            sound.Play();
+            Destroy(collision.gameObject);
+        }
     }
 
 }

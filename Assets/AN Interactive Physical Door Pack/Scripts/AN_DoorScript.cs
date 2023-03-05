@@ -25,6 +25,9 @@ public class AN_DoorScript : MonoBehaviour
     [Tooltip("Speed for door opening, degrees per sec")]
     public float OpenSpeed = 3f;
 
+    // Sound
+    public AudioSource sound;
+
     // NearView()
     float distance;
     float angleView;
@@ -107,5 +110,17 @@ public class AN_DoorScript : MonoBehaviour
         hingeLim.max = currentLim;
         hingeLim.min = -currentLim;
         hinge.limits = hingeLim;
+    }
+
+    private void OnCollisionEnter(Collision collision) 
+    {
+        if (collision.gameObject.tag == "Key"){
+            Locked = false;
+            isOpened = true;
+            sound.Play();
+            Destroy(collision.gameObject);
+            
+        }
+
     }
 }
