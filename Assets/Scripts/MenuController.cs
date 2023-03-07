@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour
 {
     public void StarBtn()
     {
-        SceneManagement.LoadScene("Main");
+        SceneManager.LoadScene("Main");
 
     }
 }
