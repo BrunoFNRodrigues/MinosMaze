@@ -7,11 +7,26 @@ namespace Valve.VR.InteractionSystem.Sample
 {
     public class UIOptions : MonoBehaviour
     {
-        public void TestButton() 
+        public void RestartButton() 
         {
-            Debug.Log("O TESTE FOI UM SUCESSO");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Main");
+        }
+        
+        public void QuitToMenuButton() 
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+        public void QuitButton() 
+        {
+            Application.Quit();
+        }
+
+        public void StartButton() 
+        {
+            SceneManager.LoadScene("Main");
         }
     }
+    
 
 }

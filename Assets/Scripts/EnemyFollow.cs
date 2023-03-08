@@ -22,7 +22,6 @@ public class EnemyFollow : MonoBehaviour
         if(Vector3.Distance(player.position, transform.position) < 4.5f)
         {
             animator.SetTrigger("Attack");
-            
         }
     }
 }
