@@ -9,6 +9,7 @@ TagManager:
   - Destructible
   - Key
   - Enemy
+  - Button
   layers:
   - Default
   - TransparentFX
